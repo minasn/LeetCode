@@ -1,0 +1,15 @@
+bool isPalindrome(int x) {
+    bool bpalindromes=false;
+    int tail=0;
+    int temp,y=x;
+    if(x==0)
+        bpalindromes=true;
+    while(x>0){
+        temp=x%10;
+        tail=tail*10+temp;
+        x/=10;
+    }
+    if(tail==y)
+        bpalindromes=true;
+    return bpalindromes;
+}
